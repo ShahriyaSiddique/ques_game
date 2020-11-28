@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/0ba748931a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="admin.style.css" />
+
+    <title>Quiz Admin</title>
+  </head>
+  <body>
+    <!-- NavBar Section start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="nav-container container">
+        <!-- <a class="navbar-brand" href="#"
+      ><img src="assets/images/logo.png" class="navBarLogo" alt=""
+    /></a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/game/dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/createGame.html">Create Game </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/gameList.html">Game List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/addQuestion.html"
+                >Add Question for Quiz</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/listQuestion.html"
+                >Question list</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/setting.html">API settings </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">Logout </a>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+
+            <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Tickets </a>
+        </li> -->
+            <!-- <li class="nav-item">
+          <a class="nav-link" href="/game/setting.html">Setting</a>
+        </li> -->
+          </ul>
+          <!-- <div
+        class="signUpInBox d-flex flex-column flex-md-row d-md-flex justify-content-md-center"
+        style="margin-left: 20%; text-decoration: none"
+      >
+        <button class="btn signinBtn">
+          <a href="/game/login.html">Sign in</a>
+        </button>
+        <button class="btn btn-info regBtn">
+          <a class="" href="/game/reg.html">Registraion</a>
+        </button>
+      </div> -->
+        </div>
+      </div>
+    </nav>
+    <!-- NavBar Section end -->
+
+    <section class="container">
+      <div class="gameNameId mt-5">
+        <h3>Game Name : <span>Basic Quiz Game</span></h3>
+        <h3>Game Id : <span>O1</span></h3>
+      </div>
+      <div class="row">
+        <div class="inputQuestion col-lg-6 my-5">
+          <form action="">
+            <div class="form-section px-lg-5">
+              <h3>Question And Answer Form</h3>
+
+              <div class="form-group">
+                <label for="question">Question*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="question"
+                  placeholder="e.g: আপনি কোন দিকের বেঞ্চে বসতে পছন্দ করতেন?"
+                  required
+                />
+              </div>
+
+              <div class="form-row my-2">
+                <div class="col-12 col-sm-12 col-md-6 mb20 pr-md-3">
+                  <label for="option1">Option1*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="option1"
+                    placeholder="e.g: একেবারে প্রথম বেঞ্চে"
+                  />
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 mb20">
+                  <label for="option1">Option2*</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: মাঝের দিকের বেঞ্চে"
+                  />
+                </div>
+              </div>
+              <div class="form-row my-2">
+                <div class="col-12 col-sm-12 col-md-6 mb20 pr-md-3">
+                  <label for="option1">Option3*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Namoption1"
+                    placeholder="e.g: শেষ বেঞ্চে না বসলে আপনার দিনটাই মাটি!"
+                  />
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 mb20">
+                  <label for="option1">Option4*</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: ক্লাসেই যেতেন নাহ"
+                  />
+                </div>
+              </div>
+
+              <div class="btnBox text-right mt-3">
+                <button class="btn btn-success">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="listOfQuestion col-lg-6 my-5">
+          <h3>List of Questions</h3>
+          <div
+            class="questionCollection border p-lg-5 overflow-auto"
+            style="height: 330px"
+          >
+            <div
+              class="questionItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <div class="question w-50">
+                <h6>আপনি কোন দিকের বেঞ্চে বসতে পছন্দ করতেন?</h6>
+              </div>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#edit"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger deleteBtn"
+                  data-toggle="modal"
+                  data-target="#delete"
+                  id="question1"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div
+              class="questionItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <div class="question w-50">
+                <h6>আপনি ক্লাসে কখন আসতেন?</h6>
+              </div>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#edit"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger deleteBtn"
+                  data-toggle="modal"
+                  data-target="#delete"
+                  id="question2"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div
+              class="questionItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <div class="question w-50">
+                <h6>ক্লাসের হোমওয়ার্ককে কতটুকু গুরুত্ব দিতেন?</h6>
+              </div>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#edit"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger deleteBtn"
+                  data-toggle="modal"
+                  data-target="#delete"
+                  id="question3"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div
+              class="questionItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <div class="question w-50">
+                <h6>ক্লাসমেটদের সাথে ঝগড়ার ব্যাপারে আপনার অবস্থান কেমন?</h6>
+              </div>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#edit"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger deleteBtn"
+                  data-toggle="modal"
+                  data-target="#delete"
+                  id="question3"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="imgInput container">
+      <h2 class="text-center my-5">Images Input Section</h2>
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 inputs px-lg-5 mb-5">
+          <form action="">
+            <div class="form-section">
+              <div class="form-row my-3">
+                <div class="col-12 col-sm-12 mb20">
+                  <label for="exampleFormControlSelect1"
+                    >Condition For Result Image</label
+                  >
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>100% correct</option>
+                    <option>75% correct</option>
+                    <option>50% correct</option>
+                    <option>25% correct</option>
+                    <option>Less then 25% correct</option>
+                    <option>0% correct</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <label for="exampleFormControlFile1">Upload image</label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  id="exampleFormControlFile1"
+                />
+              </div>
+
+              <div class="btnBox text-right mt-3">
+                <button class="btn btn-success">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6 optionList mb-5">
+          <div
+            class="questionCollection border p-lg-4 overflow-auto"
+            style="height: 330px"
+          >
+            <h3 class="mb-5">List of All Images</h3>
+            <div
+              class="uploadedImgItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <img
+                src="https://picsum.photos/200/300"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+              <h5>image name</h5>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#changeImg"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#delete"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div
+              class="uploadedImgItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <img
+                src="https://picsum.photos/200/300"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+              <h5>image name</h5>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#changeImg"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#delete"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+            <div
+              class="uploadedImgItem border border-primary d-flex justify-content-around align-items-center my-1 py-2"
+            >
+              <img
+                src="https://picsum.photos/200/300"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+              <h5>image name</h5>
+              <div class="editDelBtnBox">
+                <button
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#changeImg"
+                >
+                  Edit
+                </button>
+                <button
+                  class="btn btn-danger"
+                  data-toggle="modal"
+                  data-target="#delete"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer bg-light">
+      <hr />
+      <div class="container px-md-5 px-3">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md">
+            <img src="assets/images/logo.png" class="img-fluid" alt="" />
+            <div class="socialInfo mt-4">
+              <div>
+                <p>Find us on Social Media</p>
+              </div>
+              <div class="social-link-container d-flex justify-content-center">
+                <a href="#" class="fa fa-facebook"></a>
+
+                <a href="#" class="fa fa-google"></a>
+
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md">
+            <h3>GET IN TOUCH</h3>
+            <div class="d-flex align-items-start">
+              <span class="material-icons"> location_on </span>
+              <p class="ml-1 text-wrap">
+                Head Office Address:<br />
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+            <div class="d-flex align-items-start">
+              <span class="material-icons"> textsms </span>
+              <p class="ml-1">info@game.com</p>
+            </div>
+            <div class="d-flex align-items-start">
+              <span class="material-icons"> phone_enabled </span>
+              <p class="ml-1">Telephone: XXXXXXX,<br /></p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md">
+            <h3>Menu</h3>
+            <div class="footerLinks">
+              <ul class="pl-0">
+                <li><a href=""> Terms of Use </a></li>
+                <li><a href=""> Privacy Policy </a></li>
+                <li><a href=""> Fraud Prevention </a></li>
+                <li><a href=""> Disclaimer </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md">
+            <h3>LEGEL</h3>
+            <div class="footerLinks">
+              <ul class="pl-0">
+                <li><a href=""> Terms of Use </a></li>
+                <li><a href=""> Privacy Policy </a></li>
+                <li><a href=""> Fraud Prevention </a></li>
+                <li><a href=""> Disclaimer </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid copyright-footer">
+        <p class="text-center mb-0 py-3 font-italic">
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Modal delete start  -->
+    <div
+      class="modal fade"
+      id="delete"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Delete</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Do you want to delete this file?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              No
+            </button>
+            <button type="button" class="btn btn-primary">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal delete end -->
+
+    <!-- img Modal edit start  -->
+    <div
+      class="modal fade"
+      id="changeImg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Change Image</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="modal-body">
+              <div class="form-row my-3">
+                <div class="col-12 col-sm-12 mb20">
+                  <label for="exampleFormControlSelect1">Enter Option</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>100% correct</option>
+                    <option>75% correct</option>
+                    <option>50% correct</option>
+                    <option>25% correct</option>
+                    <option>Less then 25% correct</option>
+                    <option>0% correct</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="file"
+                  class="form-control-file"
+                  id="exampleFormControlFile1"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                No
+              </button>
+              <button type="button" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--img Modal edit end -->
+
+    <!-- Modal edit start  -->
+    <div
+      class="modal fade"
+      id="edit"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Edit This question
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="">
+            <div class="form-section px-5">
+              <div class="form-group">
+                <label for="question">Question*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="question"
+                  placeholder="e.g: আপনি কোন দিকের বেঞ্চে বসতে পছন্দ করতেন?"
+                  required
+                />
+              </div>
+
+              <div class="form-row my-2">
+                <div class="col-12 col-sm-12 col-md-6 mb20 pr-md-3">
+                  <label for="option1">Option1*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="option1"
+                    placeholder="e.g: একেবারে প্রথম বেঞ্চে"
+                    required
+                  />
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 mb20">
+                  <label for="option1">Option2*</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: মাঝের দিকের বেঞ্চে"
+                  />
+                </div>
+              </div>
+              <div class="form-row my-2">
+                <div class="col-12 col-sm-12 col-md-6 mb20 pr-md-3">
+                  <label for="option1">Option3*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Namoption1"
+                    placeholder="e.g: শেষ বেঞ্চে না বসলে আপনার দিনটাই মাটি!"
+                  />
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 mb20">
+                  <label for="option1">Option4*</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: ক্লাসেই যেতেন নাহ"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                No
+              </button>
+              <button type="button" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal edit end -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // $(".deleteBtn").click(function () {});
+    </script>
+  </body>
+</html>

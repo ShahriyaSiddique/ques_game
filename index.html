@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css" />
+    <!-- custom font -->
+    <!-- <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet" /> -->
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>
+    <div class="gameContainer">
+      <div id="gameResult" class="result py-2">
+        <div class="gameResult text-center">
+          <img class="medal" src="assets/images/medal.png" alt="" />
+          <h4 id="playerName"></h4>
+          <h4 id="score">5/5</h4>
+          <p class="text-light my-3 px-2"></p>
+          <div class="shareReplay d-flex justify-content-center mt-5">
+            <button class="btn btn-light mr-4">শেয়ার করুন</button>
+            <button id="rePlayGame" class="btn rePlay">আবার খেলুন</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="gameQuiz" class="result">
+        <!-- <div class="timer text-center">
+          <h4 id="stopWatch"></h4>
+        </div> -->
+
+        <div id="imgAndQ">
+          <div id="quesSerial" class="d-flex justify-content-center">
+            <div
+              id="serialBox"
+              class="d-flex justify-content-center align-items-center"
+            >
+              <div id="currentQue"></div>
+            </div>
+          </div>
+          <div class="question d-flex justify-content-center">
+            <h6 class="w-75 text-center"></h6>
+          </div>
+          <div id="imgAndQAfter">
+            <img src="assets/images/quesbg.png" alt="" />
+          </div>
+        </div>
+
+        <div class="ques">
+          <button id="option1" class="btn opt d-flex align-items-center">
+            <span class="d-inline-block">&emsp;A.&emsp;</span>
+            <span class="optSpan" id="opt1"></span>
+          </button>
+          <button id="option2" class="btn opt d-flex align-items-center">
+            <span class="d-inline-block">&emsp;B.&emsp;</span>
+            <span class="optSpan" id="opt2"></span>
+          </button>
+          <button id="option3" class="btn opt d-flex align-items-center">
+            <span>&emsp;C.&emsp;</span>
+            <span class="optSpan" id="opt3"></span>
+          </button>
+          <button id="option4" class="btn opt d-flex align-items-center">
+            <span>&emsp;D.&emsp;</span>
+            <span class="optSpan" id="opt4"></span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="footer d-flex justify-content-around align-items-center bg-light"
+      >
+        <img src="assets/images/medal.png" width="35px" height="35px" alt="" />
+        <h6>www.bloodbank.com</h6>
+      </div>
+    </div>
+
+    <script src="dist/progressbar.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

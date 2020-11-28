@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/0ba748931a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="admin.style.css" />
+
+    <title>Quiz Admin</title>
+  </head>
+  <body>
+    <!-- NavBar Section start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+      <div class="nav-container container">
+        <!-- <a class="navbar-brand" href="#"
+      ><img src="assets/images/logo.png" class="navBarLogo" alt=""
+    /></a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+          <ul class="navbar-nav py-3 ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/game/dashboard.html"
+                >Dashboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/createGame.html">Create Game </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/gameList.html">Game List</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/game/addQuestion.html"
+                >Add Question for Quiz</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/game/listQuestion.html"
+                >Question list</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">API settings </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">Logout </a>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+
+            <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Tickets </a>
+        </li> -->
+            <!-- <li class="nav-item">
+          <a class="nav-link" href="/game/setting.html">Setting</a>
+        </li> -->
+          </ul>
+          <!-- <div
+        class="signUpInBox d-flex flex-column flex-md-row d-md-flex justify-content-md-center"
+        style="margin-left: 20%; text-decoration: none"
+      >
+        <button class="btn signinBtn">
+          <a href="/game/login.html">Sign in</a>
+        </button>
+        <button class="btn btn-info regBtn">
+          <a class="" href="/game/reg.html">Registraion</a>
+        </button>
+      </div> -->
+        </div>
+      </div>
+    </nav>
+    <!-- NavBar Section end -->
+
+    <div class="bgColor">
+      <div class="crateText container pt-5 pb-4">
+        <h1 class="mb-0">Create New Game</h1>
+      </div>
+      <section class="createAdvQuiz container px-md-5 bg-white">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-section">
+              <div class="form-row my-3">
+                <div class="col-12 col-sm-12 col-md-6 pr-md-3">
+                  <label for="option1">Game Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="option1"
+                    placeholder="e.g: Where will be your next Travel ??"
+                  />
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="exampleFormControlSelect1">Game Type</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Select Option</option>
+                    <option>Trivia</option>
+                    <option>Gender Based</option>
+                    <option>QuizOne</option>
+                    <option>QuizTwo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row my-3">
+                <div class="col-12 col-sm-12 col-md-6 pr-md-3">
+                  <label for="option1">Game id</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: A12145"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-md-right">
+            <div class="form-group my-3">
+              <label for="fileUpload" role="button">
+                <p class="text-left">Upload Background image</p>
+
+                <img src="uploadImg.png" alt="" />
+              </label>
+              <input
+                type="file"
+                class="form-control-file d-none"
+                id="fileUpload"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="questionAns container py-5 px-md-5 bg-white">
+        <div class="quesAnsTitle">
+          <h5>Question & Answers</h5>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-section">
+              <div class="form-row my-3">
+                <div class="col-md-12 quesInput">
+                  <label for="Question">Question</label>
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="e.g: Where will be your next Travel ??"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-row my-3">
+                <div class="col-12 col-sm-12 col-md-6 pr-md-3">
+                  <label for="option1">Option 1</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: Nepal"
+                  />
+                </div>
+                <div class="col-12 col-sm-12 col-md-6">
+                  <label for="option1">Option 2</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: China"
+                  />
+                </div>
+              </div>
+              <div class="form-row my-3">
+                <div class="col-12 col-sm-12 col-md-6 pr-md-3">
+                  <label for="option1">Option 3</label>
+                  <input
+                    type="text"
+                    id="option1"
+                    class="form-control mr-5"
+                    placeholder="e.g: Pakistan"
+                  />
+                </div>
+                <div class="col-12 col-sm-12 col-md-6">
+                  <label for="option4">Option 4</label>
+                  <input
+                    type="text"
+                    id="option4"
+                    class="form-control mr-5"
+                    placeholder="e.g: India"
+                  />
+                </div>
+              </div>
+              <div class="form-row my-3">
+                <div class="col-12 col-md-6 pr-md-3">
+                  <label for="exampleFormControlSelect1">Correct Answer</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-right">
+            <div class="form-group my-3">
+              <label for="fileUpload" role="button">
+                <p class="text-left">Upload Background image</p>
+
+                <img src="uploadImgLg.png" alt="" />
+              </label>
+              <input
+                type="file"
+                class="form-control-file d-none"
+                id="fileUpload"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="addQuesBtn text-md-right">
+          <button class="btn btn-success">Submit</button>
+        </div>
+      </section>
+
+      <section
+        class="quesList container table-responsive py-5 px-md-5 bg-white"
+      >
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Ques.#</th>
+              <th scope="col">Questions</th>
+              <th scope="col">Answers</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>১</td>
+              <td>সাইমন ড্রিং কে ছিলেন?</td>
+              <td>Option 1 (সাংবাদিক)</td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>২</td>
+              <td>
+                বাংলাদেশের মুক্তিযুদ্ধের সময় ঢাকা কোন সেক্টরের অধীনে ছিলো?
+              </td>
+              <td>Option 2 (সাংবাদিক )</td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>৩</td>
+              <td>অপারেশন জ্যাকপটে মোট কতটি পাকিস্তানী জাহাজ ধ্বংস করে?</td>
+              <td>Option 3 (সাংবাদিক)</td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section
+        class="quoteList container table-responsive py-5 px-md-5 bg-white"
+      >
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Marks</th>
+              <th scope="col">Statement</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>১০-৪০%</td>
+              <td>
+                মুক্তিযুদ্ধ সম্পর্কে আপনার জ্ঞান অনেক কম । দেশ সম্পর্কে জানুন
+                ,দেশকে ভালোবাসুন
+              </td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>৪১-৭০%</td>
+              <td>
+                মুক্তিযুদ্ধ সম্পর্কে আপনার জ্ঞান মার্জিত । দেশ সম্পর্কে আরো
+                জানার চেষ্টা করুন
+              </td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>৭১-৯০%</td>
+              <td>
+                মুক্তিযুদ্ধ সম্পর্কে আপনার জ্ঞান অনেক কম । দেশ সম্পর্কে জানুন
+                ,দেশকে ভালোবাসুন
+              </td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>৯১-১০০%</td>
+              <td>আপনি সত্যিকারের একজন দেশ প্রেমিক</td>
+              <td>
+                <div class="editDelBtnBox d-flex justify-content-end">
+                  <a href="/game/editAdvQuizQuote.html"
+                    ><button class="btn btn-info mr-2">Edit</button></a
+                  >
+                  <button class="btn btn-danger deleteBtn">Delete</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="footer bg-light">
+      <div class="container-fluid copyright-footer">
+        <p class="text-center mb-0 py-3 font-italic">
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // $(".deleteBtn").click(function () {});
+    </script>
+  </body>
+</html>
